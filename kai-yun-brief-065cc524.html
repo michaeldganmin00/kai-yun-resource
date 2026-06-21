@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常索引 · 开云</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f5f3f1;
+            color: #2a2a2a;
+            line-height: 1.75;
+            letter-spacing: 0.01em;
+        }
+
+        .hero {
+            background: linear-gradient(145deg, #1f1e1c 0%, #2b2927 100%);
+            color: #ece7e1;
+            padding: 4rem 2rem 3.2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: #c7a46f;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 340;
+            letter-spacing: 0.08em;
+            opacity: 0.92;
+            margin-bottom: 0.3rem;
+            color: #f0ebe4;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #b7afa4;
+            letter-spacing: 0.12em;
+            margin-top: 0.6rem;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem 4rem;
+            background-color: #fffcf9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+
+        .article-title {
+            font-size: 1.9rem;
+            font-weight: 380;
+            color: #1e1c1a;
+            border-left: 4px solid #c7a46f;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #5b554d;
+            margin: 0.8rem 0 2rem 0;
+            padding: 0.2rem 0 0.2rem 1rem;
+            border-left: 2px solid #d9cdbc;
+            font-style: normal;
+            letter-spacing: 0.02em;
+        }
+
+        .body-text {
+            margin-bottom: 2rem;
+        }
+
+        .body-text p {
+            margin-bottom: 1.4rem;
+            text-indent: 2em;
+        }
+
+        .body-text p:first-of-type {
+            text-indent: 0;
+        }
+
+        .pull-quote {
+            background: #f0ebe4;
+            padding: 1.4rem 2rem;
+            margin: 2rem 0 2.4rem 0;
+            border-radius: 2px 12px 12px 2px;
+            border-left: 4px solid #c7a46f;
+            font-size: 1rem;
+            color: #3c3731;
+        }
+
+        .pull-quote i {
+            font-style: italic;
+            color: #7f7163;
+        }
+
+        .pull-quote strong {
+            font-weight: 500;
+            color: #2f2a24;
+        }
+
+        .inline-link {
+            color: #9b7e5a;
+            text-decoration: none;
+            border-bottom: 1px solid #d4bfa3;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 400;
+        }
+
+        .inline-link:hover {
+            color: #6f5639;
+            border-bottom-color: #6f5639;
+        }
+
+        .faq-mini {
+            background: #faf7f3;
+            padding: 1.8rem 2rem;
+            border-radius: 8px;
+            margin: 2.8rem 0 1.8rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #342f2a;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e2d5c7;
+            padding-bottom: 0.4rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 450;
+            color: #4c443b;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            color: #5f554a;
+            padding-left: 0.6rem;
+            border-left: 1px solid #ddcebc;
+            padding-left: 1rem;
+        }
+
+        .closing {
+            margin-top: 3rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #e8ded2;
+            font-size: 0.95rem;
+            color: #6a6055;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem 3rem;
+            }
+            .article-title {
+                font-size: 1.6rem;
+            }
+            .pull-quote {
+                padding: 1rem 1.2rem;
+            }
+            .faq-mini {
+                padding: 1.2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>开云</h1>
+        <div class="sub">日常查询 · 对照 · 延伸阅读</div>
+    </header>
+
+    <main class="container">
+
+        <h2 class="article-title">一个索引，在书桌与屏幕之间</h2>
+
+        <div class="lead">
+            不是门户，也不是资讯流。它更接近一本翻旧的手边册子——你想起某个名字、某条线索，于是走过去，查一下。
+        </div>
+
+        <div class="body-text">
+            <p>
+                很多次，我在浏览器里同时打开七八个标签页，只是为了确认一个日期、一段引文的出处，或者某个机构的准确名称。信息不难找，难的是对照——把几处说法放在并排，看它们之间细微的出入。这时候，一个稳定的、结构清晰的索引就变得很有用。它不必替你判断，但能让你在最短的时间内抵达那些原始出处。
+            </p>
+            <p>
+                大概一年前，我开始频繁使用 <a href="https://kai-yun-index.com" class="inline-link">开云</a>。起初只是当作一个备份式的书签集，后来发现它的条目组织方式与一般导航页不同：每个链接都带有一段简短说明，有时甚至附上引用来源的版本信息。这种克制反而让人愿意停留——你点开之前已经大概知道会看到什么，而不是被标题吸引进去却发现内容无关。
+            </p>
+            <p>
+                有一回我需要核对某个古代地名的现代对应，在搜索引擎里绕了半小时，最后是在开云的一个分类条目里找到了直接链接到地方志扫描页的入口。那种感觉像是有人在书架侧面贴了一张便条，写着“你要的东西，第三层，左边第二本”。
+            </p>
+        </div>
+
+        <div class="pull-quote">
+            <i>“索引是对注意力的诚实——它不假装自己能回答所有问题，只告诉你去哪里找答案。”</i><br>
+            <span style="display:inline-block; margin-top:0.6rem; font-size:0.9rem; color:#7f7163;">——某次阅读笔记</span>
+        </div>
+
+        <div class="body-text">
+            <p>
+                后来我养成了一个习惯：每周会花十几分钟打开开云，不是逐条浏览，而是挑两三个自己不太熟悉的分类，顺着链接点进去，读一读那些引用来源的原始页面。这种方式既不累，又能逐渐扩展自己的参照系。有些条目会指向维基文库，有些指向学术期刊的过刊存档，还有一些是个人网站上的长文。
+            </p>
+            <p>
+                当然，索引的意义在于持续维护。我注意到开云会不定期更新链接状态，失效的会被标注或替换，新收录的条目会放在一个单独的“近期更新”区域。这种透明度让人信任——你知道它不是一次建好就丢在那里不管的东西。
+            </p>
+            <p>
+                如果你也在寻找一个可以安静地对照、查证、延伸阅读的地方，也许可以试试把开云放在书签栏的某个固定位置。日常查询不需要太多花哨，可靠就够了。
+            </p>
+        </div>
+
+        <div class="faq-mini">
+            <h3>简要索引 · 常见疑问</h3>
+            <div class="faq-item">
+                <div class="q">Q：开云收录的内容偏重哪些领域？</div>
+                <div class="a">A：以人文、历史、语言、工具类为主，兼顾部分科技与艺术资源。每一条目均附有简注。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">Q：更新频率如何？</div>
+                <div class="a">A：大约每两周会有一批链接维护或新增，具体见站点内的 changelog 页面。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">Q：是否接受推荐链接？</div>
+                <div class="a">A：可以，通过站点内联系方式提交，符合收录标准的会纳入后续更新。</div>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>日常查询，对照，延伸。不妨从 <a href="https://kai-yun-index.com" class="inline-link">开云</a> 开始，慢慢构建自己的参考地图。</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
