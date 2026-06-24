@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 稳定入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            color: #1e1e1e;
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1.25rem;
+        }
+
+        .page-wrap {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #111;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b6b6b;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 1.25rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin: 2.5rem 0 1rem 0;
+            color: #222;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.75rem 0 0.5rem 0;
+            color: #2a2a2a;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #3a3a3a;
+        }
+
+        a {
+            color: #1a5c9e;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #1a5c9e;
+        }
+
+        /* 卡片式目录感布局 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #ededed;
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .card p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 0.25rem 0;
+            font-size: 0.95rem;
+            color: #3a3a3a;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .card li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #888;
+            font-weight: bold;
+        }
+
+        /* 提示区 / 说明区 轻量背景 */
+        .note-block {
+            background: #f4f6f8;
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 2rem 0;
+            border-left: 4px solid #1a5c9e;
+        }
+
+        .note-block p {
+            margin-bottom: 0.25rem;
+            color: #2c2c2c;
+        }
+
+        .faq-item {
+            margin-bottom: 1.25rem;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #1e1e1e;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-answer {
+            color: #555;
+            font-size: 0.95rem;
+            padding-left: 0.5rem;
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background: #e6e6e6;
+            margin: 2.5rem 0;
+        }
+
+        /* 相关信息区 */
+        .info-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 2rem;
+            background: #ffffff;
+            border: 1px solid #efefef;
+            border-radius: 14px;
+            padding: 1.25rem 1.75rem;
+            margin: 1.5rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: #5a5a5a;
+        }
+
+        .info-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .info-meta .label {
+            color: #999;
+            font-weight: 400;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #9a9a9a;
+            font-size: 0.85rem;
+            margin-top: 4rem;
+            border-top: 1px solid #ececec;
+            padding-top: 2rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+
+            .note-block {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- Hero / 标题区 -->
+    <h1>爱游戏 · 稳定知识入口</h1>
+    <div class="subhead">页面说明 · 目录索引 · 轻量导读</div>
+
+    <p>
+        这是一个围绕 <a href="https://indexsport-igame.com">爱游戏</a> 整理的静态说明页。我们尝试将信息组织为几个清晰的区域，帮助你快速了解平台背景、内容特点以及常见疑问。页面保持极简与留白，适合作为书签或指引页使用。
+    </p>
+
+    <!-- 说明区：卡片式目录 -->
+    <h2>📋 页面目录</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="card-title">🧭 平台速览</div>
+            <p><a href="https://indexsport-igame.com">爱游戏</a> 是一个以体育与互动内容为主的信息站点，注重访问稳定性与内容呈现的清晰度。页面结构持续优化，以适配不同设备。</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📌 特点与场景</div>
+            <ul>
+                <li>内容覆盖体育资讯、赛事动态及相关兴趣领域</li>
+                <li>界面设计以阅读体验为先，减少干扰元素</li>
+                <li>适合日常浏览、信息收集以及兴趣延伸</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🔍 使用场景举例</div>
+            <ul>
+                <li>作为体育信息参考的起点</li>
+                <li>快速查阅平台更新的内容板块</li>
+                <li>保持一个干净、无广告的入口页面</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 提示区 -->
+    <div class="note-block">
+        <p><strong>💡 提示</strong> · 本页为静态说明页，不收集任何个人信息，也不包含跳转追踪。所有链接均指向 <a href="https://indexsport-igame.com">爱游戏</a> 主站，你可以放心使用。</p>
+        <p style="margin-top:0.5rem;">如果你希望直接浏览主站内容，可通过上方链接前往；本页面可作为稳定入口保留在书签中。</p>
+    </div>
+
+    <!-- FAQ 摘要区 -->
+    <h2>❓ 常见疑问摘要</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">爱游戏主要提供哪类内容？</div>
+        <div class="faq-answer">平台以体育相关资讯、赛事数据、兴趣内容为主，页面风格简洁，信息层级清晰。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">是否需要注册或登录才能浏览？</div>
+        <div class="faq-answer">大部分内容可直接访问，部分互动功能可能视情况而定。具体以主站实际页面为准。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">这个说明页和主站是什么关系？</div>
+        <div class="faq-answer">本页是一个独立的静态介绍页，旨在提供一个稳定、轻量的入口和内容概览，不替代主站功能。</div>
+    </div>
+
+    <!-- 相关信息区 -->
+    <h2>📎 相关信息</h2>
+    <div class="info-meta">
+        <span><span class="label">指向链接</span> <a href="https://indexsport-igame.com">爱游戏</a></span>
+        <span><span class="label">页面类型</span> 静态说明 / 入口页</span>
+        <span><span class="label">更新记录</span> 2025 · 04</span>
+        <span><span class="label">风格</span> 极简 · 留白 · 中文</span>
+    </div>
+
+    <!-- 额外说明：稳定入口角度 -->
+    <p style="font-size:0.95rem; color:#5a5a5a;">
+        我们始终建议将 <a href="https://indexsport-igame.com">爱游戏</a> 添加至浏览器书签，以获得稳定、直接的访问路径。本页面不会频繁变动，适合长期保留。
+    </p>
+
+    <hr class="divider">
+
+    <div class="footer-note">
+        爱游戏 · 知识库入口 · 温和说明<br>
+        页面内容仅作指引，不构成服务承诺。
+    </div>
+
+</div>
+</body>
+</html>
