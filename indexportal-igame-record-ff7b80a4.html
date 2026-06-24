@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 索引笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1e2a3a;
+            line-height: 1.75;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 主卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e6e9ed;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* 文章头 */
+        .article-title {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+            margin-bottom: 0.4rem;
+            color: #0b1926;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6f7d8c;
+            margin-bottom: 1.6rem;
+            border-bottom: 1px solid #eceff2;
+            padding-bottom: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
+        }
+
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #2c3d50;
+            background: #f7f9fb;
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            border-left: 4px solid #2d7d9a;
+            margin-bottom: 1.8rem;
+            font-weight: 420;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 580;
+            margin: 1.8rem 0 0.6rem 0;
+            color: #1f2d3c;
+            border-bottom: 1px dashed #dce2e8;
+            padding-bottom: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* 引用块 */
+        .insight-block {
+            background: #f5f8fa;
+            border-radius: 14px;
+            padding: 1.2rem 1.4rem;
+            margin: 1.6rem 0;
+            border: 1px solid #dde3e9;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+            font-size: 0.95rem;
+        }
+
+        .insight-block .label {
+            font-weight: 600;
+            color: #2d7d9a;
+            display: block;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.02em;
+        }
+
+        .insight-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 列表 */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 1.6rem 0;
+        }
+
+        .checklist li {
+            padding: 0.4rem 0 0.4rem 1.6rem;
+            position: relative;
+            color: #1e2e3e;
+        }
+
+        .checklist li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            color: #2d7d9a;
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+
+        .faq-item {
+            margin: 1rem 0;
+            padding: 0.8rem 1rem;
+            background: #fafbfc;
+            border-radius: 10px;
+            border: 1px solid #e9edf1;
+        }
+
+        .faq-item strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #1f2d3c;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .cta-sentence {
+            font-size: 1.05rem;
+            padding: 1rem 0 0.2rem 0;
+            border-top: 1px solid #e4e9ef;
+            margin-top: 1.2rem;
+        }
+
+        a {
+            color: #1d6f8c;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0a4b63;
+            border-bottom-color: #1d6f8c;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #6a7a8a;
+            text-align: center;
+            margin-top: 2.2rem;
+            border-top: 1px solid #dce2e8;
+            padding-top: 1.4rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+                border-radius: 14px;
+            }
+            .article-title {
+                font-size: 1.6rem;
+            }
+            .lead {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .article-title {
+                font-size: 1.35rem;
+            }
+            .card {
+                padding: 1rem 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 文章卡片 -->
+    <div class="card">
+        <h1 class="article-title">爱游戏 · 查询与对照手册</h1>
+        <div class="article-meta">
+            <span>📌 索引笔记 · 日常篇</span>
+            <span>📅 2025 · 整理版</span>
+        </div>
+
+        <p class="lead">
+            一份从日常查询、对照和延伸阅读角度出发的简洁记录。不追求面面俱到，只希望为经常需要快速定位信息的读者提供一条清晰的路径。
+        </p>
+
+        <h2>一、为什么需要索引型入口</h2>
+        <p>当你在多个平台间切换、比对数据或回顾某个专题时，一个结构明确的索引门户能节省大量重复查找的时间。<a href="https://indexportal-igame.com">爱游戏</a> 正是以此为出发点搭建的聚合型页面。它不替代具体的内容站点，而是作为起点，帮助你更快地定位到目标位置。</p>
+        <p>从实际使用场景来看，无论是验证一条信息的来源，还是对比不同来源的表述差异，一个经过整理的索引页都可以减少上下文切换的损耗。这也是本篇笔记想要强调的思路：把精力留给分析，把导航交给工具。</p>
+
+        <h2>二、对照阅读的习惯</h2>
+        <p>信息密度较高的阅读场景中，我们常常需要同时打开多个标签页，来回切换。此时如果有一个固定的、轻量的索引界面，就能像书签栏一样常驻在侧。日常使用中，你可以尝试将 <a href="https://indexportal-igame.com">爱游戏</a> 作为基准页面，再根据需要逐层展开具体条目。这种方式尤其适合资料整理、专题调研和快速复查。</p>
+
+        <div class="insight-block">
+            <span class="label">📖 延伸阅读建议</span>
+            <p>不要只依赖单个页面的内链，试着从索引节点辐射出去：先阅读索引页上列出的关键词，再通过它们关联到原始资料或延伸文章。这种“辐射式”读法能有效降低信息过载，同时保持知识结构的弹性。</p>
+        </div>
+
+        <h2>三、几个常见查询场景</h2>
+        <ul class="checklist">
+            <li>场景 A：需要快速回顾某个专题的框架，直接打开索引页浏览标题层级。</li>
+            <li>场景 B：对比两个相近概念的定义或数据，利用索引页作为中轴，左右对照。</li>
+            <li>场景 C：写作或整理文档前，用索引页做一次快速的内容盘点，避免遗漏。</li>
+        </ul>
+
+        <h2>四、FAQ 摘要</h2>
+        <div class="faq-item">
+            <strong>Q：索引页会频繁更新吗？</strong>
+            <p>通常会保持相对稳定的结构，但内容链接会根据来源质量做调整。建议定期回来扫一眼。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q：是否可以直接使用索引页作为引用来源？</strong>
+            <p>索引页的主要功能是导航和聚合，引用时应以原始出处为准。索引页本身不做内容原创声明。</p>
+        </div>
+
+        <div class="cta-sentence">
+            <p>如果你希望在日常查询中有一个稳定的起点，不妨将 <a href="https://indexportal-igame.com">爱游戏</a> 加入你的阅读流。从那里出发，慢慢构建自己的信息地图。</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        索引门户 · 以查询与对照为线索 &nbsp;|&nbsp; 版本 2504
+    </div>
+
+</div>
+</body>
+</html>
